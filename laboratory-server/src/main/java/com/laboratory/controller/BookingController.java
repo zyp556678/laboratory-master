@@ -22,6 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author zyp
  */
+
 @Api(tags = "实验室预约管理")
 @RestController
 @RequestMapping("/admin/lab-booking")
