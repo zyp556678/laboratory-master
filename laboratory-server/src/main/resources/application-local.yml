@@ -1,0 +1,54 @@
+# 配置端口号和上下文
+server:
+  port: 8070 # 设置内嵌tomcat端口号
+
+# 配置数据库连接信息信息
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource # 数据源类型
+    username: root # 用户名
+    password: root # 密码
+    url: jdbc:mysql://localhost:3306/laboratorydb?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false # 连接地址
+    driver-class-name: com.mysql.cj.jdbc.Driver # 驱动名称(8.0版本)
+    #    driver-class-name: com.mysql.jdbc.Driver  # 驱动名称(5.7版本)
+    druid:
+      initial-size: 10 # 初始化连接
+      max-active: 50 # 最大连接数量
+      min-idle: 5 # 最小空闲数量
+      max-wait: 60000 # 超时等待时间以毫秒为单位
+
+      time-between-eviction-runs-millis: 60000 # 空闲连接检测时间
+      min-evictable-idle-time-millis: 300000 # 最小空闲时间
+      max-evictable-idle-time-millis: 600000 # 最大空闲时间
+
+      validation-query: SELECT 1 FROM DUAL # 检测连接是否可用
+      test-while-idle: true # 检测空闲连接
+      test-on-borrow: false # 检测连接是否可用
+      test-on-return: false # 检测连接是否可用
+      pool-prepared-statements: true # 缓存
+      max-pool-prepared-statement-per-connection-size: 20 # 缓存
+
+      keep-alive: true # 开启连接保活
+      phy-max-use-count: 100000 # 保活次数
+
+# mybatis 配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    banner: true
+
+
+# 文件存储配置
+storage:
+  strategy: local
+  # 注意: 如果使用 local 存储后改为 minio 存储，请不要注释 local 下的配置，不然会找不到文件
+  local:
+    domain: http://localhost:${server.port}
+    path: D://laboratory
+#  strategy: minio
+#  minio:
+#    access-key: minioadmin
+#    secret-key: minioadmin
+#    endpoint: http://127.0.0.1:9000
+#    bucket-name: laboratory

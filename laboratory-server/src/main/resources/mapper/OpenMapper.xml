@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.laboratory.mapper.OpenMapper">
+
+    <!-- 查询 -->
+    <select id="getAll" resultType="com.laboratory.model.vo.open.OpenVo" parameterType="com.laboratory.model.dto.open.OpenQueryDto">
+        select * from lab_open p inner join lab_sub l on p.lab_id = l.id
+        where p.is_deleted = 0 and l.is_deleted = 0
+        <if test="labSubId != null and labSubId != ''">
+            and p.lab_id = #{labSubId}
+        </if>
+        <if test="name != null and name != ''">
+            and p.name like concat('%', #{name}, '%')
+        </if>
+        <if test="phone != null and phone != ''">
+            and p.phone like concat('%', #{phone}, '%')
+        </if>
+        order by p.update_time desc
+    </select>
+
+
+    <insert id="batchInsert">
+        INSERT INTO lab_open (name, sex, phone, open_date, open_time, lab_id, create_at, create_time, update_at, update_time) VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.name}, #{item.sex}, #{item.phone}, #{item.openDate}, #{item.openTime}, #{item.labId}, #{item.createAt}, #{item.createTime}, #{item.updateAt}, #{item.updateTime})
+        </foreach>
+    </insert>
+</mapper>

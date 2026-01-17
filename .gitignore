@@ -1,0 +1,17 @@
+/shelf/
+/workspace.xml
+/dataSources/
+/dataSources.local.xml
+/httpRequests/
+.idea/
+target/
+*.iml
+test
+
+node_modules/
+dist/
+package-lock.json
+
+.idea
+.vscode
+backup
