@@ -69,29 +69,6 @@
 >
 > > - 运行后端请先修改 `application-local.yml`
 
-## 项目预览
-
-| 示例                                           | 示例                                       |
-| ---------------------------------------------- | ------------------------------------------ |
-| ![](.images/login.png)<br>登录                 | ![](.images/register.png)<br>注册          |
-| ![](.images/home.png)<br>主页                  | ![](.images/profile.png)<br>个人中心       |
-| ![](.images/user.png)<br>用户管理              | ![](.images/user-add.png)<br>用户新增      |
-| ![](.images/login-log.png)<br>登录日志         | ![](.images/operation-log.png)<br>操作日志 |
-| ![](.images/lab.png)<br>实验室管理             | ![](.images/lab-edit.png)<br>实验室编辑    |
-| ![](.images/lab-detail.png)<br>实验室分室详情  | ![](.images/booking.png)<br>实验室预约     |
-| ![](.images/lab-booking.png)<br>实验室预约管理 | ![](.images/open.png)<br>实验室开放管理    |
-| ![](.images/person.png)<br>实验室人员管理      | ![](.images/course-import.png)<br>导入课程 |
-| ![](.images/course.png)<br>课程管理            | ![](.images/project.png)<br>课程项目管理   |
-| ![](.images/project-add.png)<br>课程项目新增   | ![](.images/device.png)<br>设备管理        |
-| ![](.images/repair.png)<br>设备报修管理        | ![](.images/teacher.png)<br/> 教师页面     |
-| ![](.images/student.png)<br>学生页面           | ![](.images/my-booking.png)<br>我的预约    |
-| ![](.images/device-repair.png)<br/> 设备报修   | ![](.images/api-doc.png)<br>接口文档       |
-
-## 作者信息
-
-1. 作者：王 sir
-2. 邮箱：`work_wangbing@163.com`
-3. wx：`_king_bing`
 
 ## 关于技术栈
 
