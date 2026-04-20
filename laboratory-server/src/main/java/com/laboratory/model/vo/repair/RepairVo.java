@@ -9,7 +9,7 @@ import lombok.EqualsAndHashCode;
 /**
  * 设备报修视图参数
  *
- * @author zyp
+ * @author com.zyp
  */
 
 

@@ -9,7 +9,7 @@ import lombok.EqualsAndHashCode;
 /**
  * 实验室开放视图参数
  *
- * @author zyp
+ * @author com.zyp
  */
 
 @ApiModel(value = "实验室开放视图对象")

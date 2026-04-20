@@ -5,7 +5,7 @@ import cn.hutool.core.util.RandomUtil;
 /**
  * 存储服务
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-10-04
  */
 public interface StorageService {

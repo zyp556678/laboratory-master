@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 实验室分室控制器
  *
- * @author zyp
+ * @author com.zyp
  */
 
 @Api(tags = "实验室分室管理")

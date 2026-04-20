@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 课程导入数据监听器
  *
- * @author zyp
+ * @author com.zyp
  */
 @Slf4j
 public class CourseListener extends BaseListener<CourseEEVO, CourseMapper> {

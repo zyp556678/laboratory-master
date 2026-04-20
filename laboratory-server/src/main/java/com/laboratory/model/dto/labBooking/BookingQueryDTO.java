@@ -7,7 +7,7 @@ import lombok.Data;
 /**
  * 实验室预约查询参数
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-07-18
  */
 

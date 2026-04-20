@@ -16,7 +16,7 @@ import java.io.ByteArrayInputStream;
 /**
  * minio 存储服务实现
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-10-04
  */
 @Service

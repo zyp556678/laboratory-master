@@ -18,7 +18,7 @@ import java.util.Date;
 /**
  * 登录日志切面
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-03-08
  */
 

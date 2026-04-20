@@ -15,7 +15,7 @@ import java.util.List;
  * 基础控制器
  * - 抽取各个控制器公共方法
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-08-25
  */
 public abstract class BaseController<M extends IService<T>, T> {

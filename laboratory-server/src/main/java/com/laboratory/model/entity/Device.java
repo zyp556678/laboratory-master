@@ -11,7 +11,7 @@ import java.util.Date;
 /**
  * 实验室设备实体类
  *
- * @author zyp
+ * @author com.zyp
  */
 
 @ApiModel(value = "实验室设备")

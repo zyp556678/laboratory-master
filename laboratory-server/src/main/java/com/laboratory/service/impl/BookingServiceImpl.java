@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * 预约服务实现类
  *
- * @author zyp
+ * @author com.zyp
  */
 @Service
 public class BookingServiceImpl extends ServiceImpl<BookingMapper, Booking>

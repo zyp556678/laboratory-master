@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * 统一返回结果状态枚举类
  *
- * @author zyp
+ * @author com.zyp
  */
 @Getter
 @AllArgsConstructor

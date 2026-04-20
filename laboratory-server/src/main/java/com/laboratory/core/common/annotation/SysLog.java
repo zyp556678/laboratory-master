@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 /**
  * 操作日志注解
  *
- * @author zyp
+ * @author com.zyp
  */
 
 @Target(ElementType.METHOD)

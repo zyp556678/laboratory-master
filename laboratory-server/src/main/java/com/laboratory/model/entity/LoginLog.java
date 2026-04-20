@@ -13,7 +13,7 @@ import java.util.Date;
 /**
  * 登录日志实体类
  *
- * @author zyp
+ * @author com.zyp
  */
 
 @ApiModel(value = "登录日志")

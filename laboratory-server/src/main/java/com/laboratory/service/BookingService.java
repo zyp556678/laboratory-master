@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * 实验室预约服务接口
  *
- * @author zyp
+ * @author com.zyp
  */
 public interface BookingService extends IService<Booking> {
 

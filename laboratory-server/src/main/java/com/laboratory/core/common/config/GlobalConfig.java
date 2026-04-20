@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * 项目全局配置
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-04-01 19:13
  */
 @Configuration

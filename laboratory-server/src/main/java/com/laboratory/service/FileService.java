@@ -3,7 +3,7 @@ package com.laboratory.service;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
- * @author zyp
+ * @author com.zyp
  */
 public interface FileService {
 

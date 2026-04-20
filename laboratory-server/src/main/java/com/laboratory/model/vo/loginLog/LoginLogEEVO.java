@@ -12,7 +12,7 @@ import java.util.Date;
 /**
  * 登录日志导出视图对象
  *
- * @author zyp
+ * @author com.zyp
  */
 
 @ContentStyle(horizontalAlignment = HorizontalAlignmentEnum.CENTER)

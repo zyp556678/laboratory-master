@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * 预约状态枚举
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-10-04
  */
 @Getter

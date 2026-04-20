@@ -8,7 +8,7 @@ import com.laboratory.model.vo.repair.RepairVo;
 import java.util.List;
 
 /**
-* @author zyp
+* @author com.zyp
 * @description 针对表【device_repair(设备报修表)】的数据库操作Mapper
 * @createDate 2025-04-21 16:40:53
 */

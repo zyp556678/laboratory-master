@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * minio 存储配置
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-10-04
  */
 

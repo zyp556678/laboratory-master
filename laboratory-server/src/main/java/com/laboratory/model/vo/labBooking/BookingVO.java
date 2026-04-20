@@ -9,7 +9,7 @@ import lombok.EqualsAndHashCode;
 /**
  * 实验室预约视图
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-07-18
  */
 

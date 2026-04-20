@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * 操作类型枚举
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-08-25
  */
 

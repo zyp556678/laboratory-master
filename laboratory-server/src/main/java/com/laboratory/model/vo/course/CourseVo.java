@@ -11,7 +11,7 @@ import java.util.Date;
 /**
  * 课程视图参数
  *
- * @author zyp
+ * @author com.zyp
  */
 
 @EqualsAndHashCode(callSuper = true)

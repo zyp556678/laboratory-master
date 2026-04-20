@@ -69,7 +69,7 @@
 
 ### 1. 克隆项目
 ```bash
-git clone https://gitee.com/zyp556678/laboratory.git
+git clone https://gitee.com/com.zyp556678/laboratory.git
 ```
 
 ### 2. 配置数据库

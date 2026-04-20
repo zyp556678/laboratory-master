@@ -9,7 +9,7 @@ import lombok.EqualsAndHashCode;
 /**
  * 实验室分室视图对象
  *
- * @author zyp
+ * @author com.zyp
  */
 
 

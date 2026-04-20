@@ -2,7 +2,7 @@
 FROM openjdk:8
 
 # 作者信息
-LABEL authors="zyp"
+LABEL authors="com.zyp"
 
 # 将目录中的 jar 文件复制到容器中
 COPY *.jar app.jar

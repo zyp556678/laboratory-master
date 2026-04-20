@@ -11,7 +11,7 @@ import java.util.Date;
 /**
  * 课程导出视图对象
  *
- * @author zyp
+ * @author com.zyp
  */
 
 @ContentStyle(horizontalAlignment = HorizontalAlignmentEnum.CENTER)

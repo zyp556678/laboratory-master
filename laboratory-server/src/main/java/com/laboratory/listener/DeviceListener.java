@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 设备导入数据监听器
  *
- * @author zyp
+ * @author com.zyp
  */
 @Slf4j
 public class DeviceListener extends BaseListener<DeviceEEVO, DeviceMapper> {

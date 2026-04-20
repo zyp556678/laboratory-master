@@ -5,7 +5,7 @@ import lombok.Getter;
 
 /**
  * 自定义异常处理类
- * @author zyp
+ * @author com.zyp
  */
 
 

@@ -7,7 +7,7 @@ import lombok.Data;
 /**
  * 用户登录参数
  *
- * @author zyp
+ * @author com.zyp
  */
 
 @ApiModel(value = "用户登录参数")

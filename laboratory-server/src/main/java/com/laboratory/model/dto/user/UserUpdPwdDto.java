@@ -7,7 +7,7 @@ import lombok.Data;
 /**
  * 用户密码修改参数
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-04-14 14:56
  */
 

@@ -2,7 +2,7 @@
 FROM nginx
 
 # 作者信息
-LABEL authors="zyp"
+LABEL authors="com.zyp"
 
 # 将本地的静态文件复制到nginx默认的静态文件目录
 COPY ./dist /usr/share/nginx/html

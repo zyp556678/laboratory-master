@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * 实验室开放控制器
  *
- * @author zyp
+ * @author com.zyp
  */
 @Api(tags = "实验室开放管理")
 @RestController

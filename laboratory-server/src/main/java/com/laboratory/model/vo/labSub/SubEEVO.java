@@ -9,7 +9,7 @@ import lombok.Data;
 /**
  * 实验室分室导出视图对象
  *
- * @author zyp
+ * @author com.zyp
  */
 @ContentStyle(horizontalAlignment = HorizontalAlignmentEnum.CENTER)
 @Data

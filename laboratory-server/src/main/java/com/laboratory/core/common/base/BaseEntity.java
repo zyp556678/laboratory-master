@@ -10,7 +10,7 @@ import java.util.Date;
 /**
  * 基础实体类
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-04-01 18:10
  */
 @Data

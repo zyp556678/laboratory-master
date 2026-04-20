@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 设备报修控制器
  *
- * @author zyp
+ * @author com.zyp
  */
 
 @Api(tags = "设备报修管理")

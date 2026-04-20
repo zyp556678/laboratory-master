@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 实验室预约 Mapper 接口
  *
- * @author zyp
+ * @author com.zyp
  */
 public interface BookingMapper extends BaseMapper<Booking> {
 

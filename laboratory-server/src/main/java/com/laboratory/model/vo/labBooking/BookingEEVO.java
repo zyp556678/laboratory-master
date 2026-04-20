@@ -14,7 +14,7 @@ import java.util.Date;
 /**
  * 实验室预约导出视图对象
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-07-18
  */
 @Data

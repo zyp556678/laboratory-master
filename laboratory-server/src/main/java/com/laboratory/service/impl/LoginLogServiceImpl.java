@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author zyp
+ * @author com.zyp
  * @description 针对表【login_log(登录日志)】的数据库操作Service实现
  * @createDate 2025-04-02 20:10:54
  */

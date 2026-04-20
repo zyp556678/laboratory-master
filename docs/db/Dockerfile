@@ -2,7 +2,7 @@
 FROM mysql:8
 
 # 作者信息
-LABEL authors="zyp"
+LABEL authors="com.zyp"
 
 # 设置时区
 ENV TZ=Asia/Shanghai

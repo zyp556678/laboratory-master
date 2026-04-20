@@ -9,7 +9,7 @@ import lombok.EqualsAndHashCode;
 /**
  * 用户实体类
  *
- * @author zyp
+ * @author com.zyp
  */
 @ApiModel(value = "用户信息")
 @EqualsAndHashCode(callSuper = true)

@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * 登录日志控制器
  *
- * @author zyp
+ * @author com.zyp
  */
 @Api(tags = "登录日志管理")
 @RestController

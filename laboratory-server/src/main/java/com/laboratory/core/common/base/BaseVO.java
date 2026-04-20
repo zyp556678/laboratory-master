@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * 基础视图参数
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-08-25
  */
 

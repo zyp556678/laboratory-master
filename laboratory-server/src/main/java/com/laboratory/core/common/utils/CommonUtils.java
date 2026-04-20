@@ -25,7 +25,7 @@ import java.util.Objects;
 /**
  * 公共工具类
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-07-20
  */
 public class CommonUtils {

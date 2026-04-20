@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * 操作日志控制器
  *
- * @author zyp
+ * @author com.zyp
  */
 
 @Api(tags = "操作日志管理")

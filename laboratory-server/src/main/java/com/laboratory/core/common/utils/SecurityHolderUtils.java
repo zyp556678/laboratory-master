@@ -9,7 +9,7 @@ import java.util.Objects;
 /**
  * 获取当前登录用户信息
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-07-18
  */
 public class SecurityHolderUtils {

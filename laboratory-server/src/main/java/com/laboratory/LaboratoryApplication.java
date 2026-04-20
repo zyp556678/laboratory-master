@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * 启动类
  *
- * @author zyp
+ * @author com.zyp
  */
 @ComponentScan("com")
 @SpringBootApplication

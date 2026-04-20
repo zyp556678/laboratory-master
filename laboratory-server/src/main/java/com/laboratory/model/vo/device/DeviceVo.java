@@ -9,7 +9,7 @@ import lombok.EqualsAndHashCode;
 /**
  * 设备视图参数
  *
- * @author zyp
+ * @author com.zyp
  */
 
 @EqualsAndHashCode(callSuper = true)

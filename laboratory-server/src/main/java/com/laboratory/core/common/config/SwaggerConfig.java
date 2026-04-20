@@ -14,7 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * 接口文档配置
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-08-25
  */
 @EnableSwagger2 // 开启 swagger

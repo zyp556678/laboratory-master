@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 实验室预约控制器
  *
- * @author zyp
+ * @author com.zyp
  */
 
 @Api(tags = "实验室预约管理")

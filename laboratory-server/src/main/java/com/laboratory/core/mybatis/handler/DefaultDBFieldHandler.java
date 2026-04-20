@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  * 自动设置创建人，创建时间，修改人，修改时间默认值
- * @author zyp
+ * @author com.zyp
  */
 @Component
 public class DefaultDBFieldHandler implements MetaObjectHandler {

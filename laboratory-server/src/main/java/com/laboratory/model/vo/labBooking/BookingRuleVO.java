@@ -7,7 +7,7 @@ import lombok.Data;
 /**
  * 预约规则
  *
- * @author zyp
+ * @author com.zyp
  * @since 2025-10-04
  */
 @Data

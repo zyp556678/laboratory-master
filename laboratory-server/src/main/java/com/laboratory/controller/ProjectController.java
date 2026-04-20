@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * 课程项目控制器
  *
- * @author zyp
+ * @author com.zyp
  */
 
 @Api(tags = "课程项目管理")

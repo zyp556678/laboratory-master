@@ -9,7 +9,7 @@ import lombok.EqualsAndHashCode;
 /**
  * 设备报修实体类
  *
- * @author zyp
+ * @author com.zyp
  */
 
 @ApiModel(value = "设备报修信息")

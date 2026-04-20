@@ -10,7 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 /**
  * 文件控制器
  *
- * @author zyp
+ * @author com.zyp
  */
 @Api(tags = "文件管理")
 @RestController
