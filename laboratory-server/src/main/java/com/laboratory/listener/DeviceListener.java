@@ -2,6 +2,7 @@ package com.laboratory.listener;
 
 import cn.hutool.core.bean.BeanUtil;
 import com.laboratory.core.common.base.BaseListener;
+import com.laboratory.core.common.utils.LabIdHelper;
 import com.laboratory.mapper.DeviceMapper;
 import com.laboratory.model.entity.Device;
 import com.laboratory.model.vo.device.DeviceEEVO;
@@ -24,8 +25,14 @@ public class DeviceListener extends BaseListener<DeviceEEVO, DeviceMapper> {
         log.info("{} >> {}条数据，开始存储数据库！", this.getClass().getSimpleName(), cachedDataList.size());
         cachedDataList.forEach(item -> {
             Device device = BeanUtil.copyProperties(item, Device.class, "id");
-            // TODO 根据实验室名称查询实验室ID
-            device.setLabId(1);
+            // 根据实验室名称动态获取实验室ID
+            Integer labId = LabIdHelper.getLabIdByName(item.getLabName());
+            if (labId != null) {
+                device.setLabId(labId);
+            } else {
+                log.error("{} >> 设备[{}]未找到对应的实验室[{}]，跳过导入", this.getClass().getSimpleName(), item.getDeviceName(), item.getLabName());
+                return;
+            }
             mapper.insert(device);
         });
     }

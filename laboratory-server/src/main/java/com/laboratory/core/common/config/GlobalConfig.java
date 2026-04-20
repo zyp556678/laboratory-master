@@ -1,12 +1,15 @@
 package com.laboratory.core.common.config;
 
 import com.laboratory.core.common.interceptor.JwtInterceptor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -48,13 +51,18 @@ public class GlobalConfig implements WebMvcConfigurer {
 
 
     /**
-     * 跨域配置
+     * 跨域配置 - 从配置文件读取白名单
      */
+    @Autowired
+    private CorsProperties corsProperties;
+
     @Override
     public void addCorsMappings(CorsRegistry registry) {
+        List<String> whitelist = Arrays.asList(corsProperties.getWhitelist().split(","));
+
         registry.addMapping("/**") // 所有接口
                 .allowCredentials(true) // 是否发送 Cookie
-                .allowedOriginPatterns("*") // 支持域
+                .allowedOriginPatterns(whitelist.toArray(new String[0])) // 支持配置的域名
                 .allowedMethods("GET", "HEAD", "POST", "PUT", "DELETE", "OPTIONS") // 支持方法
                 .allowedHeaders("*")// 允许请求头
                 .exposedHeaders("*");// 暴露出去的响应头

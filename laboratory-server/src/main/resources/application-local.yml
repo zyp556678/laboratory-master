@@ -7,7 +7,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource # 数据源类型
     username: root # 用户名
-    password: root # 密码
+    # 使用jasypt加密的密码，密钥通过环境变量或启动参数传入
+    # 加密方式：java -cp jasypt-1.9.3.jar com.ulisesbocchio.jasypt-spring-boot-starter.jar com.ulisesbocchio.jasypt.tools.EncryptorCLI password your_password
+    password: ENC(zNs4xLK3QH+LdD0L8jKi/w==) # 密码 root (需替换为实际加密值)
     url: jdbc:mysql://localhost:3306/laboratorydb?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false # 连接地址
     driver-class-name: com.mysql.cj.jdbc.Driver # 驱动名称(8.0版本)
     #    driver-class-name: com.mysql.jdbc.Driver  # 驱动名称(5.7版本)
@@ -30,6 +32,29 @@ spring:
 
       keep-alive: true # 开启连接保活
       phy-max-use-count: 100000 # 保活次数
+
+  # redis 配置
+  redis:
+    host: localhost
+    port: 6379
+    password:
+    database: 0
+    timeout: 3000ms
+
+# jasypt 配置
+jasypt:
+  encryptor:
+    password: ${JASYPT_PASSWORD:laboratory_secret_key} # 生产环境通过环境变量传入
+    algorithm: PBEWithMD5AndDES
+
+# JWT 配置
+jwt:
+  secret: ${JWT_SECRET:my_secret} # 生产环境必须替换为复杂密钥
+  expire-time: 28800000 # 8小时过期时间(毫秒)
+
+# CORS 跨域白名单配置
+cors:
+  whitelist: http://localhost:9528,http://localhost:8080 # 允许的域名，多个用逗号分隔
 
 # mybatis 配置
 mybatis-plus:
