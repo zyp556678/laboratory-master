@@ -5,30 +5,44 @@ import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 /**
- *  
+ *
  * @since 2025-03-03 12:34
  * <p>
  * jwt 工具类
  */
+@Component
 public class JwtUtils {
 
     // 过期时间
     private static final Long EXPIRE_TIME = 8 * 60 * 60 * 1000L; // 8 小时
-    // 加密密钥
-    private static final String SECRET = "my_secret";
 
-    private static Set<String> blackList = new HashSet<>();
+    // 加密密钥 - 从配置文件读取
+    private static String SECRET;
 
-    public Set<String> getBlackList() {
-        return blackList;
+    // Redis模板
+    private static StringRedisTemplate redisTemplate;
+
+    // Redis Key前缀
+    private static final String BLACKLIST_PREFIX = "jwt:blacklist:";
+
+    @Value("${jwt.secret}")
+    private void setSecret(String secret) {
+        JwtUtils.SECRET = secret;
     }
 
-    public void setBlackList(Set<String> blackList) {
-        JwtUtils.blackList = blackList;
+    @Autowired
+    public void setRedisTemplate(StringRedisTemplate redisTemplate) {
+        JwtUtils.redisTemplate = redisTemplate;
     }
 
     /**
@@ -71,20 +85,26 @@ public class JwtUtils {
 
 
     /**
-     * 添加到黑名单
+     * 添加到黑名单 - 存储到Redis
      * @param token token
      */
     public static void addBlacklist(String token){
-        blackList.add(token);
+        if (redisTemplate != null) {
+            // 设置24小时过期时间，与JWT默认过期时间一致
+            redisTemplate.opsForValue().set(BLACKLIST_PREFIX + token, "1", 24, TimeUnit.HOURS);
+        }
     }
 
     /**
-     * 是否在黑名单
+     * 是否在黑名单 - 从Redis获取
      * @param token token
      * @return 是否在黑名单
      */
     public static boolean isBlacklist(String token){
-        return blackList.contains(token);
+        if (redisTemplate != null) {
+            return redisTemplate.hasKey(BLACKLIST_PREFIX + token);
+        }
+        return false;
     }
 
     public static void main(String[] args) {
